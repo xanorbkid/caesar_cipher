@@ -7,11 +7,12 @@
     <title>Caesar Cipher</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 pb-5">
                 <h2>Encrypt your Message</h2>
                 <form id="encrypt-form">
                     <div class="form-group">
@@ -22,6 +23,8 @@
                         <label for="encrypt-key">Key</label>
                         <input type="number" class="form-control" id="encrypt-key" placeholder="Enter encryption key" min="1" max="25">
                     </div>
+                    <!-- Display the encrypted message Here -->
+                    <p class="text-dark fw-bold">Result: <span id="encrypt-Message" class="text-success"></span></p>
                     <button type="submit" class="btn btn-success" id="encrypt-button">Encrypt</button>
                 </form>
             </div>
@@ -36,6 +39,9 @@
                         <label for="decrypt-key">Key</label>
                         <input type="number" class="form-control" id="decrypt-key" placeholder="Enter decryption key" min="1" max="25">
                     </div>
+                    <!-- Display Decrypted Message here -->
+                    <p class="text-dark fw-bold">Result: <span id="decrypt-Message" class="text-danger"></span></p>
+
                     <button type="submit" class="btn btn-primary" id="decrypt-button">Decrypt</button>
                 </form>
             </div>

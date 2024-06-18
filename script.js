@@ -41,6 +41,7 @@ document.getElementById('encrypt-form').addEventListener('submit', function(even
     const inputText = document.getElementById('encrypt-text').value;
     const inputKey = parseInt(document.getElementById('encrypt-key').value);
     const encrypted = encrypt(inputText, inputKey);
+    document.getElementById('encrypt-Message').textContent = encrypted;
     alert("Encrypted Text: " + encrypted);
 });
 
@@ -49,5 +50,6 @@ document.getElementById('decrypt-form').addEventListener('submit', function(even
     const inputText = document.getElementById('decrypt-text').value;
     const inputKey = parseInt(document.getElementById('decrypt-key').value);
     const decrypted = decrypt(inputText, inputKey);
+    document.getElementById('decrypt-Message').textContent = decrypted;
     alert("Decrypted Text: " + decrypted);
 });
